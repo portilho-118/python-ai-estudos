@@ -13,30 +13,30 @@ while True :
     opcao = input(str("\nEscolha uma opção: "))
 
     if opcao == "1":
-        tensao = float(input("Digite a tensão em volts: "))
-        corrente = float(input("Digite a corrente em amperes: "))
-        resultado = potencia(tensao, corrente)
+        valor_tensao = float(input("Digite a tensão em volts: "))
+        valor_corrente = float(input("Digite a corrente em amperes: "))
+        resultado = potencia(valor_tensao, valor_corrente)
         print(f"Potência: {round(resultado, 2)} Watts.")
         input("\nPressione Enter caso deseje realizar outro cálculo.")
 
     elif opcao == "2":
-        potencia = float(input("Digite a potência em Watts: "))
-        tensao = float(input("Digite a tensão em volts: "))
-        resultado = corrente(potencia, tensao)
+        valor_potencia = float(input("Digite a potência em Watts: "))
+        valor_tensao = float(input("Digite a tensão em volts: "))
+        resultado = corrente(valor_potencia, valor_tensao)
         print(f"Corrente {round(resultado, 2)} Amperes.")
         input("\nPressione Enter caso deseje realizar outro cálculo.")
     
     elif opcao == "3":
-        potencia = float(input("Digite aqui a potência em Watts: "))
-        corrente = float(input("Digite aqui a corrente em amperes: "))
-        resultado = tensao(potencia, corrente)
+        valor_potencia = float(input("Digite aqui a potência em Watts: "))
+        valor_corrente = float(input("Digite aqui a corrente em amperes: "))
+        resultado = tensao(valor_potencia, valor_corrente)
         print(f"Tensão {round(resultado, 2)} Volts.")
         input("\nPressione Enter caso deseje realizar outro cálculo.")
     
     elif opcao == "4":
-        tensao = float(input("Digite aqui a tensão em volts: "))
-        corrente = float(input("Digite aqui a corrente em amperes: "))
-        resultado = resistencia(tensao, corrente)
+        valor_tensao = float(input("Digite aqui a tensão em volts: "))
+        valor_corrente = float(input("Digite aqui a corrente em amperes: "))
+        resultado = resistencia(valor_tensao, valor_corrente)
         print(f"Resistência {round(resultado, 2)} Ohms.")
         input("\nPressione Enter para continuar.")
     
