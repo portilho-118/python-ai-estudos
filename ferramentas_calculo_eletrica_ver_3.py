@@ -1,0 +1,85 @@
+# Exercío 19: atualização do sistema de cálculo de elétrica utilizando dicionários
+
+from funcoes_eletrica import potencia, corrente, tensao, resistencia
+historico = []    
+
+while True:
+    print("\n=== Sistema de Cálculo Elétrico ===\n")
+    print("1. Cálculo de Potência")
+    print("2. Cálculo de Corrente")
+    print("3. Cálculo de Tensão")
+    print("4. Cálculo de Resistência")
+    print("5. Ver o histórico de medições")
+    print("0. Sair do Sistema")
+
+    opcao = input(str("\nEscolha uma opção: "))
+
+    if opcao == "1":
+        valor_tensao = float(input("Digite a tensão em volts: "))
+        valor_corrente = float(input("Digite a corrente em amperes: "))
+        resultado = potencia(valor_tensao, valor_corrente)
+        print(f"Potência: {round(resultado, 2)} watts.")
+
+        historico.append({
+            "tipo": "Potência",
+            "valor": resultado,
+            "unidade": "watts"
+        })
+
+        input("\nPressione Enter caso deseje realizar outro cálculo.")
+
+    elif opcao == "2":
+        valor_potencia = float(input("Digite a potência em Watts: "))
+        valor_tensao = float(input("Digite a tensão em volts: "))
+        resultado = corrente(valor_potencia, valor_tensao)
+        print(f"Corrente: {round(resultado, 2)} amperes.")
+
+        historico.append({
+            "tipo": "Corrente",
+            "valor": resultado,
+            "unidade": "amperes"
+        })
+
+        input("\nPressione Enter caso deseje realizar outro cálculo.")
+
+    elif opcao == "3":
+        valor_potencia = float(input("Digite a potência em Watts: "))
+        valor_corrente = float(input("Digite a corrente em amperes: "))
+        resultado = tensao(valor_potencia, valor_corrente)
+        print(f"Tensão {round(resultado, 2)} volts.")
+
+        historico.append({
+            "tipo": "Tensão",
+            "valor": resultado,
+            "unidade": "volts"
+        })
+
+        input("\nPressione Enter caso deseje realizar outro cálculo.")
+
+    elif opcao == "4":
+        valor_tensao = float(input("Digite a tensão em volts: "))
+        valor_corrente = float(input("Digite a corrente em amperes: "))
+        resultado = resistencia(valor_tensao, valor_corrente)
+        print(f"Resistência {round(resultado, 2)} ohms.")
+        historico.append({
+            "tipo": "Resistência",
+            "valor": resultado,
+            "unidade": "ohms"
+        })
+        input("\nPressione Enter caso deseje realizar outro cálculo.")
+
+    elif opcao == "5":
+        if len(historico) == 0:
+            print("Nenhuma medição encontrada.")
+        else: 
+            print("\n=== Histórico de Medições ===\n")
+            for medicao in historico:
+                print(f"{medicao['tipo']}: {round(medicao['valor'], 2)} {medicao['unidade']}")
+        input("\nPressione Enter caso deseje realizar outro cálculo.")
+
+    elif opcao == "0":
+        print("Encerrando o sistema...")
+        break
+
+    else:
+        print("Opção inválida. Digite novamente.")
