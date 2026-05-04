@@ -1,0 +1,5 @@
+Potência: 1524.0 watts
+Resistência: 10.58 ohms
+Corrente: 9.45 amperes
+Potência: 4560.0 watts
+Resistência: 36.67 ohms
