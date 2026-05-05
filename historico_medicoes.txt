@@ -3,3 +3,7 @@ Resistência: 10.58 ohms
 Corrente: 9.45 amperes
 Potência: 4560.0 watts
 Resistência: 36.67 ohms
+Potência: 1320.0 watts
+Tensão: 12.4 volts
+[04/05/2026 22:58] Tensão: 104.17 volts
+[04/05/2026 22:58] Corrente: 9.45 amperes
