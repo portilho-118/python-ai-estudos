@@ -7,3 +7,7 @@ Potência: 1320.0 watts
 Tensão: 12.4 volts
 [04/05/2026 22:58] Tensão: 104.17 volts
 [04/05/2026 22:58] Corrente: 9.45 amperes
+[05/05/2026 14:44] Potência: 1270.0 watts
+[05/05/2026 14:44] Corrente: 10.24 amperes
+[05/05/2026 14:44] Tensão: 302.08 volts
+[05/05/2026 14:44] Resistência: 25.45 ohms
