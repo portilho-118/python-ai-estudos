@@ -1,3 +1,5 @@
+# Exercício 35: como utilizar o pandas para normalizar os dados e exportar a tabela para Microsoft Excel. 
+
 import pandas as pd
 
 registros = []
