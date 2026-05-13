@@ -60,6 +60,8 @@ testes = np.array([
     [127, 10.2],
     [220, 13],
     [380, 2],
+    [12.5, 1.3],
+
 ])
 
 resultados = modelo.predict(testes)
